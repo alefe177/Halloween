@@ -1,0 +1,218 @@
+:root {
+  --fundo: #120d1a;
+  --caixa: #241a33;
+  --laranja: #ff7a1a;
+  --texto: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--fundo);
+  color: var(--texto);
+  font-family: Arial, sans-serif;
+  margin: 0;
+  line-height: 1.5;
+}
+
+h2 {
+  color: var(--laranja);
+}
+
+.hidden {
+  display: none;
+}
+
+/* TOPO */
+header {
+  background-color: #000;
+  text-align: center;
+  padding: 15px;
+}
+
+header h2 {
+  margin: 0 0 8px;
+}
+
+header a {
+  color: var(--laranja);
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+header a:hover {
+  text-decoration: underline;
+}
+
+/* INÍCIO */
+.hero {
+  text-align: center;
+  padding: 60px 20px;
+  background-color: #2a1245;
+}
+
+.hero h1 {
+  color: var(--laranja);
+  font-size: 2.5rem;
+}
+
+/* BOTÕES */
+.button,
+.toggle-btn {
+  display: inline-block;
+  background-color: var(--laranja);
+  color: #000;
+  font-weight: bold;
+  border: none;
+  border-radius: 25px;
+  padding: 10px 24px;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.button:hover,
+.toggle-btn:hover {
+  background-color: #ffa24d;
+}
+
+/* Botão escuro (usado na seção do favorito, que é laranja) */
+.button.dark {
+  background-color: #000;
+  color: var(--laranja);
+}
+
+.button.dark:hover {
+  background-color: #333;
+}
+
+/* FILMES */
+.movies {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 30px 20px;
+}
+
+.movies h2 {
+  text-align: center;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background-color: var(--caixa);
+  border: 2px solid var(--laranja);
+  border-radius: 12px;
+  padding: 15px;
+}
+
+.card:hover {
+  box-shadow: 0 0 15px var(--laranja);
+}
+
+.poster {
+  font-size: 3.5rem;
+  text-align: center;
+  background-color: #3a2455;
+  border-radius: 8px;
+  padding: 15px;
+  margin-bottom: 10px;
+}
+
+.stars {
+  color: var(--laranja);
+  font-size: 1.2rem;
+}
+
+.review {
+  margin-top: 12px;
+  padding-top: 8px;
+  border-top: 1px solid #555;
+}
+
+/* Botões menores dentro dos cards */
+.card .button,
+.card .toggle-btn {
+  margin-top: 8px;
+  font-size: 0.9rem;
+  padding: 8px 18px;
+}
+
+/* SORTEIO */
+.random {
+  text-align: center;
+  background-color: var(--caixa);
+  padding: 40px 20px;
+}
+
+#random-result {
+  margin-top: 20px;
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: var(--laranja);
+}
+
+/* FAVORITO */
+.favorite {
+  background-color: var(--laranja);
+  color: #000;
+  text-align: center;
+  padding: 35px 20px;
+}
+
+.favorite h2 {
+  color: #000;
+}
+
+/* RODAPÉ */
+footer {
+  background-color: #000;
+  text-align: center;
+  padding: 15px;
+}
+
+/* ===== PÁGINAS DOS FILMES ===== */
+.big-emoji {
+  font-size: 5rem;
+}
+
+/* Imagem do filme (fica escondida até o arquivo existir na pasta images/) */
+.movie-img {
+  display: none;
+  width: 100%;
+  max-width: 320px;
+  margin: 0 auto 15px;
+  border: 3px solid var(--laranja);
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(255, 122, 26, 0.5);
+}
+
+.detail {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 30px 20px;
+}
+
+.info-list {
+  list-style: none;
+  margin: 0 0 25px;
+  padding: 15px 20px;
+  background-color: var(--caixa);
+  border: 2px solid var(--laranja);
+  border-radius: 12px;
+}
+
+.info-list li {
+  padding: 6px 0;
+  border-bottom: 1px solid #444;
+}
+
+.info-list li:last-child {
+  border-bottom: none;
+}
